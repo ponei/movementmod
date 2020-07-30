@@ -1,0 +1,12 @@
+[
+{
+  "modid": "elixe",
+  "name": "Elixe",
+  "description": "movement focused mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ponei"]
+}
+]
