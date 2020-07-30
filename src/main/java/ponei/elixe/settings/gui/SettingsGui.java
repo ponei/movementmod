@@ -33,17 +33,17 @@ public class SettingsGui extends GuiScreen {
         releaseComponents();
     }
 
-    private void holdComponents(int mouseX, int mouseY){
-        if (mod.speedometer.contains(mouseX, mouseY)){
+    private void holdComponents(int mouseX, int mouseY) {
+        if (mod.speedometer.contains(mouseX, mouseY)) {
             mod.speedometer.beingDragged = true;
         }
     }
 
-    private void releaseComponents(){
+    private void releaseComponents() {
         mod.speedometer.beingDragged = false;
     }
 
-    private void dragComponents(int mouseX, int mouseY){
+    private void dragComponents(int mouseX, int mouseY) {
         if (mod.speedometer.beingDragged) {
             mod.speedometer.meterXOffset += mouseX - this.lastX;
             mod.speedometer.meterYOffset += mouseY - this.lastY;
@@ -52,16 +52,14 @@ public class SettingsGui extends GuiScreen {
 
     @Override
     public void onGuiClosed() {
-        if (mc.currentScreen == null) {
-            mod.settingsManager.updateSettings(true);
-        }
+        mod.settingsManager.updateSettings(true);
     }
 
-    protected int getCenter(int off){
+    protected int getCenter(int off) {
         return width / 2 - off;
     }
 
-    protected int getHeight(int row){
+    protected int getHeight(int row) {
         return 40 + row * 22;
     }
 }
